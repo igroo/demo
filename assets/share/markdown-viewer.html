@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Title</title>
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/markdown/strapdown/themes/united.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/markdown/strapdown/strapdown-custom-v0.2.css"/>
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/markdown/strapdown/themes/bootstrap-responsive.min.css"/>
+	<link rel="stylesheet" href="/assets/vendor/highlight/styles/monokai-sublime.css">
+
+	<script src="/assets/vendor/markdown/marked.min.js"></script>
+	<script src="/assets/vendor/highlight/highlight-9.9.pack.js"></script>
+	<script>
+	marked.setOptions({
+	  highlight: function (code) {
+		  	   hljs.initHighlightingOnLoad();
+	    return hljs.highlightAuto(code).value;
+	  }
+	});
+	function setValue(value){
+		document.getElementById('viewer-container').innerHTML = marked(value);
+	}
+	</script>
+</head>
+	<body>
+		<div id="viewer-container"></div>
+	</body>
+</html>
