@@ -1,6 +1,6 @@
 # Demo HamornyPortal
 
-* [Demo](https://igroo.github.io/demo/index.html/) - go Demo
+* Demo - [go Demo](https://igroo.github.io/demo/index.html/)
 
 ## Getting Started
 
