@@ -1,6 +1,6 @@
 # Demo HamornyPortal
 
-One Paragraph of project description goes here
+* [Demo](https://igroo.github.io/demo/index.html/) - go Demo
 
 ## Getting Started
 
