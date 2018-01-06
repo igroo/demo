@@ -8,84 +8,124 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="https://cdn.dhtmlx.com/edge/dhtmlx.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.dhtmlx.com/edge/dhtmlx.css">
   <link rel="stylesheet" type="text/css" href="/demo/css/styles.css">
 </head>
 
 <body>
-  <div class="webos" id="webos-container">
+
+  <div class="webos task-wrapper" id="webos-container">
     <div id="webos-viewport"></div>
+    <div class="webos-task-menu">
+      <ul>
+        <li>
+          <a href="javascript:apps.explorer.on();">
+            <img src="./demo/images/icon_explorer.png" class="task-menu-item-icon">
+            <span class="task-menu-item-title txt_dots">Explorer</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:apps.dashboard.on();">
+            <img src="./demo/images/icon_dashboard.png" class="task-menu-item-icon">
+            <span class="task-menu-item-title txt_dots">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./demo/images/icon_monitoring.png" class="task-menu-item-icon">
+            <span class="task-menu-item-title txt_dots">Monitoring</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:apps.settings.on();">
+            <img src="./demo/images/icon_settings.png" class="task-menu-item-icon">
+            <span class="task-menu-item-title txt_dots">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:apps.help.on();">
+            <img src="./demo/images/icon_help.png" class="task-menu-item-icon">
+            <span class="task-menu-item-title txt_dots">Help</span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="webos-wallpapers"></div>
-</div>
-<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark" style="padding-top:0px;padding-bottom:0px;">
-  <a href="https://github.com/igroo/demo" class="navbar-brand">Harmony</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropup">
-        <a class="nav-link" href="https://getbootstrap.com" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <div class="icon-image windows"></div>
-        </a> 
-        <div class="dropdown-menu" aria-labelledby="dropdown10">
-          <a class="dropdown-item" onclick="javascript:apps.settings.on();">
-            <div  class="icon-image settings"></div>
-            <div>Settings</div>  
-          </a>
-          <a class="dropdown-item" onclick="javascript:apps.dashboard.on();">
-            <div class="icon-image dashboard"></div>
-            <div>Dashboard</div>
-          </a>
-          <a class="dropdown-item" onclick="javascript:apps.board.on();">
-            <div class="icon-image board"></div>
-            <div>Board</div>
-          </a>
-          <a class="dropdown-item" onclick="javascript:apps.explorer.on();">
-            <div class="icon-image explorer"></div>
-            <div>Explorer</div>
-          </a>
-          <a class="dropdown-item" onclick="javascript:apps.help.on();">
-            <div class="icon-image help"></div>
-            <div>Help</div>
-          </a>
-        </div> 
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" onclick="javascript:apps.settings.on();">
-          <div class="icon-image settings"></div>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" onclick="javascript:apps.dashboard.on();">
-          <div class="icon-image dashboard"></div>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" onclick="javascript:apps.board.on();">
-          <div class="icon-image board"></div>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" onclick="javascript:apps.explorer.on();">
-          <div class="icon-image explorer"></div>
-        </a>
-      </li> 
-      <li class="nav-item">
-        <a class="nav-link" onclick="javascript:apps.help.on();">
-          <div class="icon-image help"></div>
-        </a>
-      </li>
-    </ul>
   </div>
-</nav>
+  <div class="webos taskbar-wrapper">
+    <div class="taskbar">
+      <div class="taskbar-home">
+        <input type="checkbox" id="tgl-start">
+        <label id="start" for="tgl-start">
+          <img src="./demo/images/windows-blue.png" class="taskbar-item-icon">
+        </label>
+        <div id="startmenu">
+          <div class="startmenu-user">
+            <img class="startmenu-win-icon" src="http://dade.lamkins.org/wp-content/uploads/2016/04/dlamkins-180.png">Dade Lamkins</div>
+
+          <div class="startmenu-label">Service</div>
+          <div class="startmenu-app" onclick="javascript:apps.explorer.on();$('#start').trigger('click');"><img class="startmenu-win-icon" src="./demo/images/icon_explorer.png">Explorer</div>
+          <div class="startmenu-app" onclick="javascript:apps.dashboard.on();$('#start').trigger('click');"><img class="startmenu-win-icon" src="./demo/images/icon_dashboard.png">Dashboard</div>
+          <div class="startmenu-app"><img class="startmenu-win-icon" src="./demo/images/icon_monitoring.png">Monitoring</div>
+          <div class="startmenu-app" onclick="javascript:apps.settings.on();$('#start').trigger('click');"><img class="startmenu-win-icon" src="./demo/images/icon_settings.png">Settings</div>
+          <div class="startmenu-app" onclick="javascript:apps.help.on();$('#start').trigger('click');"><img class="startmenu-win-icon" src="./demo/images/icon_help.png">Help</div>
+
+          <div style="margin:5px 0;" class="startmenu-option">
+            <hr style="width: 100%;" />
+          </div>
+          <div class="startmenu-app">
+            <img class="startmenu-win-icon" src="./demo/images/icon_power.png">Logout</div>
+        </div>
+      </div>
+      <div class="taskbar-menu-wrapper">
+        <ul id="taskbar-menu">
+          <li class="taskbar-item-opened txt_dots">
+            <a href="javascript:apps.explorer.on();">
+              <img src="./demo/images/icon_explorer.png" class="taskbar-item-icon">
+              <span class="taskbar-item-title hide">Explorer</span>
+            </a>
+          </li>
+          <li class="taskbar-item-opened taskbar-item-activated txt_dots">
+            <a href="javascript:apps.dashboard.on();">
+              <img src="./demo/images/icon_dashboard.png" class="taskbar-item-icon">
+              <span class="taskbar-item-title hide">Dashboard</span>
+            </a>
+          </li>
+          <li class="txt_dots">
+            <a href="#">
+              <img src="./demo/images/icon_monitoring.png" class="taskbar-item-icon">
+              <span class="taskbar-item-title hide">Monitoring</span>
+            </a>
+          </li>
+          <li class="txt_dots">
+            <a href="javascript:apps.dashboard.on();">
+              <img src="./demo/images/icon_settings.png" class="taskbar-item-icon">
+              <span class="taskbar-item-title hide">Settings</span>
+            </a>
+          </li>
+          <li class="txt_dots">
+            <a href="javascript:apps.help.on();">
+              <img src="./demo/images/icon_help.png" class="taskbar-item-icon">
+              <span class="taskbar-item-title hide">Help</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="taskbar-menu-short">
+      </div>
+      <div class="taskbar-alarm">
+        <img src="./demo/images/icon_alarm.png" class="taskbar-item-icon">
+        <span class="taskbar-badge">99+</span>
+      </div>
+      <div class="taskbar-tray">
+        <span id="system-time">오전 11:08</span>
+        <span id="language">2018-01-06</span>
+      </div>
+    </div>
+  </div>
 
 <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js"></script>
 
 <script src="/demo/js/share/dhtmlx-suite-plugin.js"></script>
