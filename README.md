@@ -1,6 +1,6 @@
 # Demo HamornyPortal
 
-* Demo - [go Demo](https://igroo.github.io/demo)
+* Demo jquery - [go Demo](https://igroo.github.io/demo/jquery)
 * Demo VOD - [go Demo VOD](https://igroo.github.io/demo/demo.mp4)
 
 ## Getting Started
