@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editor</title>
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/markdown/strapdown/themes/united.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/markdown/strapdown/strapdown-custom-v0.2.css"/>
+	<link rel="stylesheet" href="/assets/vendor/highlight/styles/monokai-sublime.css">
+	<link rel="stylesheet" href="/assets/vendor/simplemde/simplemde-v1.11.2.min.css">
+
+	<script src="/assets/vendor/simplemde/simplemde-v1.11.2.min.js"></script>
+	<script src="/assets/vendor/highlight/highlight-9.9.pack.js"></script>
+</head>
+	<body>
+		<textarea id="editor_container"></textarea>
+		<script>
+		var mdeoptions = {
+		    autofocus: true,
+		    element: document.getElementById("editor_container"),
+		    lineWrapping: false,
+		    placeholder: "Type here...",
+		    renderingConfig: {
+		        singleLineBreaks: false,
+		        codeSyntaxHighlighting: true,
+		    },
+		    spellChecker: false,
+		    status: ["lines", "words", "cursor", {
+		        className: "keystrokes",
+		        defaultValue: function(el) {
+		            this.keystrokes = 0;
+		            el.innerHTML = "0 Keystrokes";
+		        },
+		        onUpdate: function(el) {
+		            el.innerHTML = ++this.keystrokes + " Keystrokes";
+		        }
+		    }],
+		    styleSelectedText: false,
+		    tabSize: 4,
+		    toolbar: ["bold", "italic", "heading", "strikethrough", "|",
+		              "heading", "heading-smaller", "heading-bigger", "heading-1", "heading-2", "heading-3", "|",
+		              "code", "quote", "unordered-list", "ordered-list", "clean-block", "link", "image", "table", "|",
+		              "horizontal-rule", "preview", "side-by-side", "fullscreen", "|", "guide"],
+		    toolbarTips: true
+		};
+	    var simplemde = new SimpleMDE(mdeoptions);
+	//    if(!me.simplemde.isPreviewActive()){
+	//		me.simplemde.togglePreview(me.simplemde.codemirror);
+	//		$("div.editor-preview").addClass("editor-preview-active");
+	//	}
+		</script>
+	</body>
+</html>
