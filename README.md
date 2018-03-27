@@ -4,7 +4,7 @@
 * Demo angular - [go Demo](https://igroo.github.io/demo/angular)
 * Demo VOD - [go Demo VOD](https://igroo.github.io/demo/demo.mp4)
 
-## Getting Started
+## Getting Started2
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
